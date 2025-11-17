@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactos na Saúde</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+    function enviaFormulario(event) {
+        event.preventDefault();
+
+        const listaMensagens = document.getElementById("listaMensagens");
+        const nome = document.getElementById("nome").value;
+        const comentario = document.getElementById("comentario").value;
+
+        const li = document.createElement("li");
+        const div = document.createElement("div");
+        div.classList.add("msg");
+
+        const pNome = document.createElement("p");
+        pNome.innerHTML = `<strong>${nome}</strong>`;
+
+        const pComent = document.createElement("p");
+        pComent.textContent = comentario;
+
+        const btnCurtir = document.createElement("button");
+        btnCurtir.innerHTML = `<i class="fa-solid fa-thumbs-up"></i> <span class="likes">0</span>`;
+        btnCurtir.classList.add("like-btn");
+
+        btnCurtir.addEventListener("click", () => {
+            const span = btnCurtir.querySelector(".likes");
+            span.textContent = parseInt(span.textContent) + 1;
+        });
+
+        div.appendChild(pNome);
+        div.appendChild(pComent);
+        div.appendChild(btnCurtir);
+
+        li.appendChild(div);
+        listaMensagens.appendChild(li);
+
+        event.target.reset();
+    }
+</script>
+
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+             <li><a href="index.html">Home</a></li>
+             <li class="has-submenu">
+                <a href="#">Destaques ▼</a>
+                <ul class="submenu">
+                    <li><a href="poster/posters.html">Posters</a></li>
+                    <li class="has-submenu">
+                        <a href="#">Entrevistas/Dicas ➤</a>
+                        <ul class="submenu">
+                            <li><a href="./videos/videos.html">Entrevista</a></li>
+                            <li><a href="#">Videos com Dicas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+             </li> 
+             <li><a href="#">Sobre Nós</a></li>
+             <li><a href="#">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+        <div class="main-left">
+            <h1 class="main-heading">Impactos da Tela <br>
+            na <span style="color: #B6C4FF;">Saúde!</span></h1>
+            <p class="main-subheading">Este site explora os efeitos do uso excessivo de telas na nossa saúde física e mental, <br> desde a fadiga ocular e distúrbios do sono até o impacto na concentração e no humor. <br> Aqui, você vai descobrir informações científicas, dicas práticas e estratégias para equilibrar <br>o mundo digital com o bem-estar.</p>
+        </div>
+    </section>
+
+    <section class="poster">
+        <div class="image-container">
+        <img src="./img/sociais.png" alt="Poster Impactos Sociais">
+        <div class="image-overlay">
+            <h3>Impactos Sociais</h3>
+            <a href="./poster/poster1.html">
+            <p>Clique aqui para ver mais detalhes!</p>
+            </a>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="./img/fisico.png" alt="Poster Impactos Físicos">
+        <div class="image-overlay">
+            <h3>Impactos Físicos</h3>
+            <a href="./poster/poster2.html">
+            <p>Clique aqui para ver mais detalhes!</p>
+            </a>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="./img/biologico.png" alt="Poster Impactos Biológicos">
+        <div class="image-overlay">
+            <h3>Impactos Biológicos</h3>
+            <a href="./poster/poster3.html">
+            <p>Clique aqui para ver mais detalhes!</p>
+            </a>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="./img/imagem1.png" alt="Poster Impactos Psicológicos">
+        <div class="image-overlay">
+            <h3>Impactos Psicológicos</h3>
+            <a href="./poster/poster4.html">
+            <p>Clique aqui para ver mais detalhes!</p>
+            </a>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="./img/quimicos.png" alt="Poster Impactos Químicos">
+        <div class="image-overlay">
+            <h3>Impactos Químicos</h3>
+            <a href="./poster/poster5.html">
+            <p>Clique aqui para ver mais detalhes!</p>
+            </a>
+        </div>
+    </div>
+    </section>
+
+        <h2>Entrevistas e Vídeos com dicas</h2>
+    <div class="content-grid">
+        <div class="text-side">
+            <h3>Entrevistas e Dicas</h3>
+            <p>Descubra como o tempo que passamos em frente às telas está mudando nossa saúde.<br> Assista às entrevistas e aprenda estratégias simples para reduzir os efeitos negativos<br> sem abrir mão da tecnologia.</p>
+        </div>
+        
+        <div class="videos-side">
+            <div class="video-container">
+                <h4>Drauzio Varella</h4>
+                <video controls class="video">
+                    <source src="./videos/Como a tecnologia pode estar alterando a sua memória.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos. <a href="./videos/Como a tecnologia pode estar alterando a sua memória.mp4">Baixe o vídeo</a>.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <h4>Mayra Gaiato</h4> 
+                <video controls class="video">
+                    <source src="./videos/Entenda como as telas ACABAM com o cérebro das crianças ｜ Mayra Gaiato no Canal Girassol.mp4" type="video/mp4"> 
+                    Seu navegador não suporta vídeos. <a href="./videos/Entenda como as telas ACABAM com o cérebro das crianças ｜ Mayra Gaiato no Canal Girassol.mp4">Baixe o vídeo</a>.
+                </video>
+            </div>
+
+            <div class="video-container">
+                <h4>3 Dicas.. </h4>
+                <video controls class="video">
+                    <source src="./videos/3 dicas para diminuir o tempo de tela das crianças.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos. <a href="./videos/3 dicas para diminuir o tempo de tela das crianças.mp4">Baixe o vídeo</a>.
+                </video>
+            </div>
+        </div>
+    </div>
+ 
+    <section class="apps-section">
+        <h2>Aplicativos para Bem-Estar Digital</h2>
+        <p>Conheça ferramentas que ajudam a monitorar, limitar e compreender melhor o uso do seu celular, promovendo uma relação mais equilibrada com a tecnologia.</p>
+
+        <div class="grid-container">
+             <a href="./apps/screenTime.html" class="grid-item item-1"></a>
+             <a href="./apps/freedom.html" class="grid-item item-2"></a>
+             <a href="./apps/digitalwelbeing.html" class="grid-item item-3"></a>
+        </div>
+    </section>
+
+    <section class="parents-section">
+  <div class="glass-card">
+    <h3>Dica para os Pais e Responsáveis</h3>
+    <p>As crianças e adolescentes de hoje crescem em um mundo cada vez mais conectado, e isso traz oportunidades incríveis de aprendizado, criatividade e comunicação, mas também exige atenção.</p>
+    <p>É importante acompanhar o tempo de uso dos dispositivos, entender quais aplicativos seus filhos utilizam e conversar com eles sobre os riscos e benefícios do mundo digital. Estabelecer limites saudáveis, incentivar pausas e atividades fora das telas ajuda a desenvolver hábitos equilibrados desde cedo.</p>
+    <p>Em vez de apenas controlar, procure participar, explore aplicativos educativos juntos, descubra conteúdos que estimulem a curiosidade e o pensamento crítico. O diálogo e o exemplo são as melhores ferramentas para formar cidadãos digitais conscientes e responsáveis.</p>
+  </div>
+</section>
+
+    <div class="container">
+    <div class="article">
+        <h1>Home Office</h1>
+
+        <p>Trabalhar de casa oferece flexibilidade, mas também exige disciplina e cuidados com a saúde física e mental. É fácil perder a noção do tempo ou misturar tarefas pessoais com profissionais, então criar uma rotina organizada é essencial.</p>
+
+        <p>Reserve um espaço exclusivo para o trabalho, mesmo que pequeno, e mantenha-o limpo e funcional. Boa iluminação, cadeira confortável e postura correta ajudam a evitar dores e fadiga. Lembre-se de fazer pausas curtas a cada hora para alongar-se e descansar os olhos.</p>
+
+        <p>Gerencie seu tempo com ferramentas de organização, como agendas digitais ou aplicativos de tarefas. Estabeleça horários claros para início, pausas e fim do expediente, e comunique seus familiares sobre esses horários, garantindo foco e produtividade.</p>
+
+        <p>Além disso, cuide do equilíbrio mental: mantenha contato com colegas, faça pequenas pausas para relaxamento, pratique exercícios físicos e reserve momentos para hobbies. Um home office saudável combina disciplina, conforto e atenção ao bem-estar.</p>
+    </div>
+
+    <div class="card">
+        <div class="card-face card-front"><img src="Homeoffice.jpg"></div>
+        <div class="card-face card-back"><img src="HomeOffice.jpg"></div>
+    </div>
+</div>
+<section class="bate-papo">
+    <h2>Compartilhe sua Experiência</h2>
+    <p>Conte como mudou seus hábitos com telas!</p>
+
+    <div class="chat-container">
+        
+        <!-- FORMULÁRIO -->
+        <form id="comentForm" method="POST" action="#" onsubmit="enviaFormulario(event)" class="form-side">
+            <label>Nome:
+                <input type="text" id="nome" name="nome" required>
+            </label>
+
+            <label>Comentário:
+                <input type="text" id="comentario" name="comentario" required>
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- LISTA DE MENSAGENS -->
+        <div class="mensagens-side">
+            <ul id="listaMensagens"></ul>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
