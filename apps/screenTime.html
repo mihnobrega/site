@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Screen Time</title>
+    <title>Screen Time - Controle de Uso de Tela</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e5f5;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            margin: 20px 0;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #7b1fa2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #4a148c;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>App</h2>
+    <header>
+        <h1>Screen Time: Monitore e Controle Seu Tempo em Telas</h1>
+    </header>
+    <div class="container">
+        <img src="../img/app/screentime.png" alt="Ícone do App Screen Time">
+        <h2>O que é o Screen Time?</h2>
+        <p>O Screen Time é um recurso integrado ao iOS (disponível em dispositivos Apple) que rastreia o tempo gasto em apps e define limites diários. Ele ajuda a reduzir o uso excessivo de telas, promovendo equilíbrio e prevenindo impactos como dores de cabeça e distúrbios do sono.</p>
+        <h3>Como ajuda na saúde:</h3>
+        <ul style="text-align: left; display: inline-block;">
+            <li>Fornece relatórios detalhados sobre hábitos de uso.</li>
+            <li>Permite definir limites para apps específicos.</li>
+            <li>Encoraja pausas e atividades offline para a saúde mental.</li>
+        </ul>
+        <br>
+        <a href="https://support.apple.com/pt-br/HT208982" target="_blank">Saiba Mais (Apple Support)</a>
+        <br>
+        <a href="../index.html">Voltar à Página Inicial</a>
+    </div>
 </body>
 </html>
